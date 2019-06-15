@@ -50,6 +50,10 @@ UI.prototype.loadAllFilms = function(films){
         `;
     });
 }
+
+UI.prototype.deleteFilmFromUI = function(element){
+    element.parentElement.parentElement.remove();
+}
 // <!-- <tr>
 // <td><img src="" class="img-fluid img-thumbnail"></td>
 // <td></td>
