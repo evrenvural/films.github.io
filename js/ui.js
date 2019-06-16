@@ -54,15 +54,11 @@ UI.prototype.loadAllFilms = function(films){
 UI.prototype.deleteFilmFromUI = function(element){
     element.parentElement.parentElement.remove();
 }
-// <!-- <tr>
-// <td><img src="" class="img-fluid img-thumbnail"></td>
-// <td></td>
-// <td></td>
-// <td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
-// </tr> -->
-// <!-- <tr>
-// <td><img src="" class="img-fluid img-thumbnail"></td>
-// <td></td>
-// <td></td>
-// <td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
-// </tr> -->
+
+UI.prototype.clearAllFilmsFromUI = function(){
+    const filmList = document.getElementById("films");
+    
+    while(filmList.firstElementChild !== null){
+        filmList.firstElementChild.remove();
+    }
+}
